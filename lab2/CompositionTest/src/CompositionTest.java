@@ -1,5 +1,4 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class CompositionTest {
     public static void main(String[] args) {
         Address address = new Address("Travessa da Figueira", "Barreiro", "2830-370", "Portugal");
@@ -31,9 +30,5 @@ public class CompositionTest {
         // Print updated account information
         System.out.println("Updated Account Summary:");
         System.out.println("Account Holder Address: " + bankAccount.getAccountHolder().getAddress());
-
     }
-
-
-
 }

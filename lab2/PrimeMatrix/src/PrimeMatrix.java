@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+
 public class PrimeMatrix {
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -14,9 +14,9 @@ public class PrimeMatrix {
         int num = scanner.nextInt();
 
         if (isPrime(num)) {
-            System.out.println(STR."\{num} is a prime number!");
+            System.out.println(num + " is a prime number!");
         } else {
-            System.out.println(STR."\{num} is not a prime number!");
+            System.out.println(num + " is not a prime number!");
         }
 
         System.out.println("******** GENERATING PRIME MATRIX *********");
@@ -89,11 +89,9 @@ public class PrimeMatrix {
         System.out.println("******** GENERATING PRIME MATRIX FROM A CONFIGURATION FILE *********");
         System.out.println("---------------------------------------------------------------------");
 
-        int rows = 0;
-        int cols = 0;
+        int rows;
+        int cols;
 
-//        File configFile = new File(filename);
-//        Scanner  fileScanner = new Scanner(configFile);
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filename))) {
             String firstLine = bufferedReader.readLine();
             String secondLine = bufferedReader.readLine();
@@ -140,7 +138,7 @@ public class PrimeMatrix {
         int rows = matrix.length;
         int cols = matrix[0].length;
         // Display the matrix
-        System.out.println(STR."Prime Matrix \{rows} x \{cols}: ");
+        System.out.println("Prime Matrix " + rows + " x " + cols + ": ");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 System.out.print(matrix[i][j]);

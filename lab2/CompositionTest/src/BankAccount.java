@@ -42,6 +42,7 @@ public class BankAccount {
         System.out.println("Deposited " + amount);
     }
 
+    // Method withdraw
     public void withdraw(double amount) {
         if (amount > 0 && amount < balance) {
             balance -= amount;

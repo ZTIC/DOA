@@ -3,8 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class FileManipulation {
     public static void main(String[] args) {
         writeTextToFile("student_info.txt", "Name: Maria Silva");
@@ -41,7 +40,7 @@ public class FileManipulation {
         Path path = Paths.get(filename);
 
         if (!Files.exists(path)) {
-            throw new RuntimeException(STR."File not found: \{filename}");
+            throw new RuntimeException("File not found: " + filename);
         }
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
