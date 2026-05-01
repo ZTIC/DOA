@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /api/v1/
+  port: 8001
+
+spring:
+  application:
+    name: crud-management
+  config:
+    import: optional:file:.env[.properties] # charging environment variables in dotenv file
+    servlet:
+      multipart:
+        max-file-size: 50MB
+  springdoc:
+    default-produces-media-type: application/json
+
+  datasource:
+    url: jdbc:mysql://${DB_URL}:${DB_PORT}/${DB_NAME}?createDatabaseIfNotExist=true
+    username: ${USER_NAME}
+    password: ${PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
